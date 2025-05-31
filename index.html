@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portofolio Fotografer - Irwan</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Particles.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #111827;
+        color: white;
+        margin: 0;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      #particles-js {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        background: #111827;
+      }
+
+      header,
+      main,
+      footer,
+      section {
+        position: relative;
+        z-index: 10;
+      }
+
+      header {
+        padding: 4rem 1rem 2rem;
+        text-align: center;
+      }
+
+      header h1 {
+        font-weight: 700;
+        font-size: 3rem;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+      }
+
+      header p {
+        margin-top: 0.5rem;
+        color: #d1d5db;
+        font-size: 1.25rem;
+      }
+
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 1rem 4rem;
+      }
+
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .menu-card {
+        background: #1f2937;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        font-weight: 600;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .menu-card:hover {
+        background: #2563eb;
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.9);
+      }
+
+      /* Booking Section */
+      #booking {
+        background: #1f2937;
+        padding: 2rem 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(37, 99, 235, 0.7);
+        max-width: 600px;
+        margin: 0 auto 4rem;
+      }
+
+      #booking h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      #booking form input,
+      #booking form textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        background-color: #374151;
+        color: white;
+        resize: none;
+      }
+
+      #booking form input:focus,
+      #booking form textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px #2563eb;
+      }
+
+      #booking form button {
+        background-color: #2563eb;
+        color: white;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+      }
+
+      #booking form button:hover {
+        background-color: #1d4ed8;
+      }
+
+      iframe {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 0 30px rgba(37, 99, 235, 0.7);
+        max-width: 960px;
+        width: 100%;
+        height: 600px;
+        margin: 0 auto 4rem;
+        display: block;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem 1rem 2rem;
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="particles-js"></div>
+
+    <header>
+      <h1>Irwan</h1>
+      <p>Fotografer Profesional | Menangkap Momen Terbaik Anda</p>
+    </header>
+
+    <main>
+      <h2 class="text-center text-2xl font-semibold">
+        Pilih Kategori Portofolio
+      </h2>
+      <div class="menu-grid">
+        <a href="produk.html" class="menu-card">Foto Produk</a>
+        <a href="prewedding.html" class="menu-card">Foto Prewedding</a>
+        <a href="keluarga.html" class="menu-card">Foto Keluarga</a>
+        <a href="event.html" class="menu-card">Foto Event</a>
+      </div>
+
+      <section id="booking">
+        <h2>Booking Jadwal Foto</h2>
+        <form id="bookingForm" name="bookingForm">
+          <input
+            type="text"
+            id="nama"
+            name="nama"
+            placeholder="Nama Lengkap"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input type="date" id="tanggal" name="tanggal" required />
+          <input type="time" id="waktu" name="waktu" required />
+          <textarea
+            id="pesan"
+            name="pesan"
+            rows="4"
+            placeholder="Catatan tambahan"
+          ></textarea>
+          <button type="submit">Kirim Booking</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>© 2025 Irwan - All rights reserved.</footer>
+
+    <script>
+      // Particles.js config
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: { enable: true, speed: 4, out_mode: "out" },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "grab" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+
+      // Kirim form booking ke Google Apps Script
+      document
+        .getElementById("bookingForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const url =
+            "https://script.google.com/macros/s/AKfycbxSlVnKSS6TPBEk5Jk-FC5ydotaTTPxnzPWTj8MvrAYM1YquIXO-plTM6GPysQxYmMD/exec"; // Ganti dengan URL Apps Script-mu
+
+          const form = e.target;
+
+          fetch(url, {
+            method: "POST",
+            body: new FormData(form),
+          })
+            .then((res) => res.json())
+            .then(() => {
+              alert("Booking berhasil terkirim!");
+              form.reset();
+            })
+            .catch(() => alert("Gagal mengirim booking."));
+        });
+      const tanggalInput = document.getElementById("tanggal");
+      const waktuInput = document.getElementById("waktu");
+
+      let dataTerbooking = [];
+
+      fetch(
+        "https://script.google.com/macros/s/AKfycbxSlVnKSS6TPBEk5Jk-FC5ydotaTTPxnzPWTj8MvrAYM1YquIXO-plTM6GPysQxYmMD/exec"
+      ) // Ganti dengan URL GET dari Apps Script
+        .then((res) => res.json())
+        .then((data) => {
+          dataTerbooking = data;
+        });
+
+      waktuInput.addEventListener("input", function () {
+        const tanggalDipilih = tanggalInput.value;
+        const waktuDipilih = waktuInput.value;
+
+        const bentrok = dataTerbooking.some(
+          (item) =>
+            item.tanggal === tanggalDipilih && item.waktu === waktuDipilih
+        );
+
+        if (bentrok) {
+          alert("Waktu ini sudah dibooking. Silakan pilih waktu lain.");
+          waktuInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>

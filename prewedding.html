@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeri Foto Keluarga</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <header>
+      <h1>Galeri Foto Keluarga</h1>
+      <a href="index.html" class="btn-back">← Kembali ke Beranda</a>
+    </header>
+
+    <main>
+      <div class="gallery-grid">
+        <img src="https://source.unsplash.com/400x400/?family,portrait" />
+        <img src="https://source.unsplash.com/400x400/?family,smile" />
+        <img src="https://source.unsplash.com/400x400/?family,children" />
+        <img src="https://source.unsplash.com/400x400/?family,happy" />
+        <img src="https://source.unsplash.com/400x400/?family,outdoor" />
+        <img src="https://source.unsplash.com/400x400/?family,vacation" />
+      </div>
+    </main>
+
+    <footer>© 2025 [Nama Anda] - All rights reserved.</footer>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 60, density: { enable: true, value_area: 700 } },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.4 },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 130,
+            color: "#ffffff",
+            opacity: 0.3,
+            width: 1,
+          },
+          move: { enable: true, speed: 3, out_mode: "out" },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            repulse: { distance: 100 },
+            push: { particles_nb: 4 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
+</html>

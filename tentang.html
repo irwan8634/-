@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tentang Saya - Portofolio</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #111827;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col items-center justify-center px-4">
+      <header class="text-center mb-8" data-aos="fade-down">
+        <h1 class="text-4xl font-bold mb-2">Tentang Saya</h1>
+        <p class="text-gray-400">
+          Kenalan lebih dekat dengan saya sebagai fotografer
+        </p>
+      </header>
+
+      <section
+        class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8 items-center"
+        data-aos="fade-up"
+      >
+        <img
+          src="https://source.unsplash.com/400x400/?photographer,portrait"
+          alt="Foto Saya"
+          class="rounded-xl shadow-lg w-full"
+        />
+        <div>
+          <h2 class="text-2xl font-bold mb-4">[Nama Anda]</h2>
+          <p class="mb-4 text-gray-300">
+            Saya adalah fotografer profesional yang berfokus pada dokumentasi
+            momen spesial seperti foto keluarga, pernikahan, wisuda, dan produk.
+            Dengan pengalaman lebih dari 5 tahun, saya percaya bahwa setiap foto
+            memiliki cerita unik.
+          </p>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>Berbasis di: Jakarta</li>
+            <li>Pengalaman: 5+ tahun</li>
+            <li>Kamera: Canon EOS R6</li>
+            <li>Software: Lightroom, Photoshop</li>
+          </ul>
+        </div>
+      </section>
+
+      <a href="index.html" class="mt-12 text-blue-400 hover:underline"
+        >&larr; Kembali ke Beranda</a
+      >
+    </div>
+
+    <!-- Init AOS -->
+    <script>
+      AOS.init({
+        once: true,
+        duration: 800,
+      });
+    </script>
+  </body>
+</html>
